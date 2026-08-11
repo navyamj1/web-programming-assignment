@@ -1,0 +1,333 @@
+/*@import url('https://api.fontshare.com/v2/css?f[]=gambetta@400&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap');
+*/
+:root {
+    --bg-color: #2a3821;
+    --card-bg: #090f06;
+    --border-color: rgba(198, 198, 198, 0.15);
+    --text-main: #FDFDFD;
+    --text-muted: #C6C6C6;
+    --accent-color: #d1c766;
+    --accent-hover: #f1de31;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 28px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 78, 8, 0.3);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+}
+
+h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--accent-color);
+    letter-spacing: 0.02em;
+}
+
+strong,
+b {
+    letter-spacing: 0.02em;
+}
+
+p {
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a,
+a:visited {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.contact-details,
+.grid-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    align-items: center;
+}
+
+.contact-details p,
+.contact-details a,
+.contact-details a:visited,
+.grid-2 p {
+    margin-bottom: 0;
+    color: var(--text-muted);
+}
+
+.contact-details a:hover {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+.contact-details strong,
+.grid-2 strong {
+    color: var(--text-main);
+}
+
+.personal-history-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .personal-history-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bio-text {
+        max-width: 70%;
+    }
+}
+
+.bio-text p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.avatar-wrapper {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 0 3px var(--border-color), 0 8px 24px rgba(0, 0, 0, 0.4);
+    margin-right: 24px;
+}
+
+.links-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.link-badge,
+.link-badge:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.link-badge:hover {
+    background-color: rgba(255, 78, 8, 0.12);
+    border-color: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.styled-list {
+    padding-left: 20px;
+}
+
+.styled-list li {
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-cat-title {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    font-weight: 400;
+}
+
+.styled-list li::marker {
+    color: var(--accent-color);
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-item {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.project-header h3 {
+    margin-bottom: 0;
+}
+
+.sub-tag {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.project-tech strong {
+    color: var(--accent-color);
+}
+
+/* Page Loader Overlay */
+#loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#loader-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-svg {
+    width: 52px;
+    height: 52px;
+    color: var(--accent-color);
+}
+
+@keyframes spin-pixel {
+    0% { opacity: 0; }
+    1% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.pixel-1 { animation: spin-pixel 0.8s ease-in-out 0s infinite; }
+.pixel-2 { animation: spin-pixel 0.8s ease-in-out 0.1s infinite; }
+.pixel-3 { animation: spin-pixel 0.8s ease-in-out 0.2s infinite; }
+.pixel-4 { animation: spin-pixel 0.8s ease-in-out 0.3s infinite; }
+.pixel-5 { animation: spin-pixel 0.8s ease-in-out 0.4s infinite; }
+.pixel-6 { animation: spin-pixel 0.8s ease-in-out 0.5s infinite; }
+.pixel-7 { animation: spin-pixel 0.8s ease-in-out 0.6s infinite; }
+.pixel-8 { animation: spin-pixel 0.8s ease-in-out 0.7s infinite; }
